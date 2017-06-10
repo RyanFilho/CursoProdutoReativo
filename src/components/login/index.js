@@ -21,23 +21,13 @@ class Login extends Component {
   }
 
   render () {
-    const { user, ...rest } = this.props;
-    if (user.uid ) {
-      return (
-        <div className="login">
-          <div>
-            <button onClick={this.login}>Login Google</button>
-          </div>
+    return (
+      <div className="login">
+        <div>
+          <button onClick={this.login}>Login Google</button>
         </div>
-      )
-    } else {
-      return(
-        <Redirect to={{
-          pathname: '/',
-          state: { from: props.location }
-        }}/>
-      );
-    }
+      </div>
+    )
   }
 }
 
